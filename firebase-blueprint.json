@@ -1,0 +1,60 @@
+{
+  "entities": {
+    "Property": {
+      "title": "Property",
+      "description": "Real estate property listing for LB Negócios Imobiliários",
+      "type": "object",
+      "properties": {
+        "id": { "type": "string", "description": "Unique identifier of property" },
+        "code": { "type": "string", "description": "Listing code, e.g. LB-0101" },
+        "title": { "type": "string", "description": "Display title of property" },
+        "type": { "type": "string", "enum": ["casa", "apartamento", "terreno", "comercial"] },
+        "typeLabel": { "type": "string", "description": "Human readable property type" },
+        "transaction": { "type": "string", "enum": ["venda", "aluguel"] },
+        "transactionLabel": { "type": "string", "description": "Human readable transaction type" },
+        "price": { "type": "number", "description": "Price in BRL" },
+        "priceFormatted": { "type": "string", "description": "Formatted price string, e.g. R$ 350.000" },
+        "condoFee": { "type": "string", "description": "Optional monthly condo fee" },
+        "iptu": { "type": "string", "description": "Optional IPTU fee" },
+        "neighborhood": { "type": "string", "description": "Neighborhood in Horizonte or nearby" },
+        "city": { "type": "string", "description": "City name, defaults to Horizonte" },
+        "state": { "type": "string", "description": "State acronym, defaults to CE" },
+        "addressSummary": { "type": "string", "description": "Short address line" },
+        "bedrooms": { "type": "number", "description": "Number of bedrooms" },
+        "bathrooms": { "type": "number", "description": "Number of bathrooms" },
+        "parkingSpaces": { "type": "number", "description": "Number of parking spaces" },
+        "areaM2": { "type": "number", "description": "Usable or land area in square meters" },
+        "shortDescription": { "type": "string", "description": "Brief summary description" },
+        "fullDescription": { "type": "string", "description": "Comprehensive property description" },
+        "features": { "type": "array", "description": "List of amenities and characteristics" },
+        "images": { "type": "array", "description": "List of property image objects with url, alt, caption" },
+        "isDemonstration": { "type": "boolean", "description": "Flag for demonstration property" },
+        "featured": { "type": "boolean", "description": "Flag indicating if property is featured on homepage" },
+        "createdAt": { "type": "string", "description": "ISO creation date timestamp" },
+        "updatedAt": { "type": "string", "description": "ISO last update date timestamp" }
+      },
+      "required": ["code", "title", "type", "transaction", "price", "neighborhood", "city", "state"]
+    },
+    "AdminProfile": {
+      "title": "AdminProfile",
+      "description": "Administrator profile record",
+      "type": "object",
+      "properties": {
+        "email": { "type": "string", "description": "Admin email address" },
+        "role": { "type": "string", "description": "Role name, e.g. admin" },
+        "name": { "type": "string", "description": "Admin name" }
+      },
+      "required": ["email", "role"]
+    }
+  },
+  "firestore": {
+    "/properties/{propertyId}": {
+      "schema": "Property",
+      "description": "Public catalog of real estate properties managed by LB Negócios Imobiliários"
+    },
+    "/admins/{adminId}": {
+      "schema": "AdminProfile",
+      "description": "Authorized administrator profiles"
+    }
+  }
+}

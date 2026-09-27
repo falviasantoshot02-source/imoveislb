@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  }
+
+  h1, h2, h3, .font-serif-brand {
+    letter-spacing: -0.015em;
+  }
+}
+
+:root {
+  --brand-blue-950: #081528;
+  --brand-blue-900: #0d213f;
+  --brand-blue-800: #14325e;
+  --brand-blue-700: #1d4682;
+  --brand-gold-600: #a9801a;
+  --brand-gold-500: #c59b27;
+  --brand-gold-400: #dfb743;
+  --brand-gold-100: #fbf5e6;
+  --brand-gold-50: #fefdf8;
+}

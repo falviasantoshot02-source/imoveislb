@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000" width="1000" height="1000">
+  <defs>
+    <!-- Outer Gold Ring Gradients -->
+    <radialGradient id="goldRim" cx="35%" cy="28%" r="70%">
+      <stop offset="0%" stop-color="#FFF6CC"/>
+      <stop offset="15%" stop-color="#FBE08B"/>
+      <stop offset="35%" stop-color="#D4A63E"/>
+      <stop offset="50%" stop-color="#8C6418"/>
+      <stop offset="65%" stop-color="#E3BE5B"/>
+      <stop offset="85%" stop-color="#FDE494"/>
+      <stop offset="100%" stop-color="#785310"/>
+    </radialGradient>
+
+    <linearGradient id="goldRimBevel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFEAA5"/>
+      <stop offset="25%" stop-color="#C89B32"/>
+      <stop offset="50%" stop-color="#5E3F0A"/>
+      <stop offset="75%" stop-color="#E4BC55"/>
+      <stop offset="100%" stop-color="#8A6115"/>
+    </linearGradient>
+
+    <!-- Navy Background -->
+    <radialGradient id="navyBg" cx="48%" cy="42%" r="55%">
+      <stop offset="0%" stop-color="#163c72"/>
+      <stop offset="40%" stop-color="#0e2952"/>
+      <stop offset="75%" stop-color="#081a36"/>
+      <stop offset="100%" stop-color="#040c1a"/>
+    </radialGradient>
+
+    <!-- Metallic Gold for House & Text -->
+    <linearGradient id="goldElement" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFF1BA"/>
+      <stop offset="20%" stop-color="#F6D678"/>
+      <stop offset="55%" stop-color="#D1A135"/>
+      <stop offset="80%" stop-color="#A5771D"/>
+      <stop offset="100%" stop-color="#5F3E07"/>
+    </linearGradient>
+
+    <linearGradient id="goldElementDiag" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#FFF6CE"/>
+      <stop offset="25%" stop-color="#F1D06F"/>
+      <stop offset="60%" stop-color="#C9992E"/>
+      <stop offset="85%" stop-color="#926615"/>
+      <stop offset="100%" stop-color="#5C3D0A"/>
+    </linearGradient>
+
+    <!-- Metallic Silver/White for LB -->
+    <linearGradient id="silverLB" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="30%" stop-color="#F4F6F9"/>
+      <stop offset="70%" stop-color="#D5DBE4"/>
+      <stop offset="100%" stop-color="#A8B2C1"/>
+    </linearGradient>
+
+    <!-- Badge Metallic Fill -->
+    <linearGradient id="badgeFill" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#EEF2F6"/>
+      <stop offset="100%" stop-color="#D1D7E0"/>
+    </linearGradient>
+
+    <!-- Drop Shadows -->
+    <filter id="drop3D" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="5" dy="10" stdDeviation="6" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+
+    <filter id="rimShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000000" flood-opacity="0.6"/>
+    </filter>
+  </defs>
+
+  <!-- Outer Ring Bevel Shadow -->
+  <circle cx="500" cy="500" r="482" fill="none" stroke="url(#goldRimBevel)" stroke-width="6" filter="url(#rimShadow)"/>
+
+  <!-- Main Metallic Gold Ring -->
+  <circle cx="500" cy="500" r="460" fill="none" stroke="url(#goldRim)" stroke-width="40"/>
+  <circle cx="500" cy="500" r="439" fill="none" stroke="#4F3508" stroke-width="4"/>
+  <circle cx="500" cy="500" r="481" fill="none" stroke="#FFECA0" stroke-width="2.5" opacity="0.8"/>
+
+  <!-- Disc Interior (Deep Navy) -->
+  <circle cx="500" cy="500" r="437" fill="url(#navyBg)"/>
+
+  <!-- Subtle inner radial glow on navy background -->
+  <circle cx="500" cy="500" r="436" fill="none" stroke="#000000" stroke-width="16" opacity="0.55"/>
+
+  <!-- GROUP: HOUSE ARCHITECTURE & EMBLEM -->
+  <g filter="url(#drop3D)">
+
+    <!-- 1. LEFT HOUSE (Back) -->
+    <!-- Left Roof Ridge & Eaves -->
+    <path d="M 218 418 L 426 210 L 515 299 L 485 329 L 426 270 L 258 438 Z" fill="url(#goldElementDiag)" stroke="#FFEAA5" stroke-width="2"/>
+
+    <!-- Left House 3 Vertical Pillars on the far left -->
+    <!-- Pillar 1 -->
+    <path d="M 242 258 L 258 258 L 258 696 L 242 696 Z" fill="url(#goldElement)"/>
+    <!-- Pillar 2 -->
+    <path d="M 266 258 L 282 258 L 282 696 L 266 696 Z" fill="url(#goldElement)"/>
+    <!-- Pillar 3 -->
+    <path d="M 290 258 L 306 258 L 306 662 L 306 662 Z" fill="url(#goldElement)"/>
+
+    <!-- Left Window (Gold 4-pane) -->
+    <rect x="380" y="285" width="66" height="66" fill="#0e2952" stroke="url(#goldElement)" stroke-width="7" rx="3"/>
+    <line x1="413" y1="285" x2="413" y2="351" stroke="url(#goldElement)" stroke-width="5"/>
+    <line x1="380" y1="318" x2="446" y2="318" stroke="url(#goldElement)" stroke-width="5"/>
+
+    <!-- 2. RIGHT HOUSE (Front Overlapping) -->
+    <!-- Chimney on left slope of right roof -->
+    <rect x="520" y="226" width="34" height="58" fill="url(#goldElement)" stroke="#FFEAA5" stroke-width="1.5" rx="2"/>
+    <rect x="515" y="222" width="44" height="9" fill="url(#goldElement)" rx="1.5"/>
+
+    <!-- Right House White Inner Highlight & Gold Gable -->
+    <path d="M 395 450 L 595 248 L 795 450 L 760 485 L 595 318 L 430 485 Z" fill="url(#goldElementDiag)" stroke="#FFEAA5" stroke-width="2.5"/>
+    <!-- White inner trim under the right gable roof -->
+    <path d="M 454 476 L 595 334 L 736 476 L 720 492 L 595 366 L 470 492 Z" fill="#FFFFFF" opacity="0.95"/>
+
+    <!-- Right Window (White/Gold 4-pane) -->
+    <rect x="560" y="335" width="70" height="70" fill="#0d2750" stroke="url(#goldElement)" stroke-width="7" rx="3"/>
+    <line x1="595" y1="335" x2="595" y2="405" stroke="#FFFFFF" stroke-width="5"/>
+    <line x1="560" y1="370" x2="630" y2="370" stroke="#FFFFFF" stroke-width="5"/>
+
+    <!-- 3. BASE LINES UNDER 'LB' AND TEXT -->
+    <!-- Outer Horizontal Baseline Strip -->
+    <path d="M 242 682 L 765 682" stroke="url(#goldElement)" stroke-width="11" stroke-linecap="round"/>
+    <!-- Middle Horizontal Baseline Strip -->
+    <path d="M 266 706 L 755 706" stroke="url(#goldElement)" stroke-width="9" stroke-linecap="round"/>
+    <!-- Lower Horizontal Baseline Strip -->
+    <path d="M 290 728 L 740 728" stroke="url(#goldElement)" stroke-width="8" stroke-linecap="round"/>
+
+    <!-- 4. TEXT 'LB' (Crisp 3D Silver-White) -->
+    <g transform="translate(316, 656)">
+      <text font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="184" fill="url(#silverLB)" letter-spacing="-4">LB</text>
+    </g>
+
+    <!-- 5. TEXT 'NEGÓCIOS IMOBILIÁRIOS' (Metallic 3D Gold) -->
+    <g transform="translate(492, 560)">
+      <text font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="58" fill="url(#goldElement)" letter-spacing="4">NEGÓCIOS</text>
+    </g>
+    <g transform="translate(492, 638)">
+      <text font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="50" fill="url(#goldElement)" letter-spacing="1.5">IMOBILIÁRIOS</text>
+    </g>
+
+    <!-- 6. BOTTOM CRECI BADGE -->
+    <!-- Rounded Pill Badge Background -->
+    <rect x="365" y="744" width="270" height="62" rx="31" fill="url(#badgeFill)" stroke="url(#goldElement)" stroke-width="5" filter="url(#drop3D)"/>
+    <!-- CRECI Text inside Badge -->
+    <text x="500" y="787" font-family="'Montserrat', 'Arial Black', sans-serif" font-weight="900" font-size="27" fill="#0d213f" text-anchor="middle" letter-spacing="2.5">CRECI 18864F</text>
+
+  </g>
+</svg>

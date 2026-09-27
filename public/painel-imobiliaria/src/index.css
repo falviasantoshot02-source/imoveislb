@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Montserrat', system-ui, -apple-system, sans-serif;
+  }
+  h1, h2, h3, .font-serif {
+    font-family: 'Cinzel', serif;
+  }
+}

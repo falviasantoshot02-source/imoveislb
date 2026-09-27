@@ -1,0 +1,16 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+    
+    // Properties catalog: public viewing, admin management
+    match /properties/{propertyId} {
+      allow read: if true;
+      allow create, update, delete: if true;
+    }
+
+    match /admins/{adminId} {
+      allow read, write: if true;
+    }
+  }
+}
+

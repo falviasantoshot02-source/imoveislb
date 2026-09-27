@@ -1,0 +1,6 @@
+{
+  "name": "LB Negócios Imobiliários",
+  "description": "Imóveis para comprar e alugar em Horizonte - CE. Atendimento exclusivo com Lucilene Bezerra (CRECI 18846F) e LB Negócios Imobiliários (CRECI J 29910 J).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
